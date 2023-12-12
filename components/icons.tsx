@@ -2,25 +2,25 @@ import * as React from "react";
 import { IconSvgProps } from "@/types";
 
 export const Logo: React.FC<IconSvgProps> = ({
-	size = 36,
+	size = 44,
 	width,
 	height,
 	...props
 }) => (
-	<svg
-		fill="none"
-		height={size || height}
-		viewBox="0 0 32 32"
-		width={size || width}
-		{...props}
-	>
-		<path
-			clipRule="evenodd"
-			d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-			fill="currentColor"
-			fillRule="evenodd"
-		/>
-	</svg>
+		<svg 
+			height={size || height}
+			viewBox="0 0 44 75"
+			width={size || width}
+			{...props} 
+		>
+		<g id="mark">
+		
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M34.923 9.99986L26.1924 15.0001L17.4619 19.9997L8.73058 25V34.9999V40.0001V44.9997V50V55.0003L17.4619 50L26.1924 44.9997V40.0001V34.9999L17.4619 40.0001V30.0003L26.1924 25L34.923 19.9997V25V30.0003V34.9999V40.0001V44.9997V50L26.1924 55.0003L17.4619 59.9999L8.73058 65.0001L0 69.9997L8.73058 75L17.4619 69.9997L26.1924 65.0001L34.923 59.9999L43.6543 55.0003V44.9997V34.9999V25V21.1647V15.0001V5.00029L34.923 0V9.99986Z" fill="white"/>
+		
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M34.923 9.99986L26.1924 15.0001L17.4619 19.9997L8.73058 25V34.9999V40.0001V44.9997V50V55.0003L17.4619 50L26.1924 44.9997V40.0001V34.9999L17.4619 40.0001V30.0003L26.1924 25L34.923 19.9997V25V30.0003V34.9999V40.0001V44.9997V50L26.1924 55.0003L17.4619 59.9999L8.73058 65.0001L0 69.9997L8.73058 75L17.4619 69.9997L26.1924 65.0001L34.923 59.9999L43.6543 55.0003V44.9997V34.9999V25V21.1647V15.0001V5.00029L34.923 0V9.99986Z" fill="white"/>
+		</g>
+		
+		</svg>
 );
 
 export const DiscordIcon: React.FC<IconSvgProps> = ({
