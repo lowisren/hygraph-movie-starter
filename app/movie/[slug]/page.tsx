@@ -1,9 +1,6 @@
 //Movie individual page: app/artist/[slug]/page.tsx
 import Image from "next/image";
 
-
-
-
 async function getMovie(slug: string) {
   const HYGRAPH_ENDPOINT = process.env.HYGRAPH_ENDPOINT;
 
@@ -45,8 +42,9 @@ if (!HYGRAPH_ENDPOINT) {
         }),
       }
     );
+
     const data = await response.json();
-    console.log(data.data.movie);
+    //console.log(data.data.movie);
     return data.data.movie
   }
 

@@ -5,8 +5,8 @@ export const siteConfig = {
 	description: "Make beautiful websites regardless of your design experience.",
 	navItems: [
 		{
-			label: "Home",
-			href: "/",
+			label: "Movies",
+			href: "/movies",
 		},
     {
       label: "Docs",

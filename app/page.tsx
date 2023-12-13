@@ -5,19 +5,56 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
+import MovieCard from "@/components/MovieCard";
 
-export default function Home() {
+//Get featured Movies
+
+async function getFeaturedMovies() {
+	const HYGRAPH_ENDPOINT = process.env.HYGRAPH_ENDPOINT;
+	if (!HYGRAPH_ENDPOINT) {
+	  throw new Error("HYGRAPH_ENDPOINT is not defined");
+	}
+	const response = await fetch(HYGRAPH_ENDPOINT, {
+	  method: "POST",
+	  headers: {
+		"Content-Type": "application/json",
+	  },
+	  body: JSON.stringify({
+		query: `
+		query Movies {
+		  movies(first: 8) {
+			  federateMovie {
+				data {
+				  Title
+				  Poster
+				  Genre
+				  Director
+				}
+			  }
+			  id
+			  slug
+			}
+		}`,
+	  }),
+	});
+	const json = await response.json();
+	return json.data.movies;
+  }
+  
+
+export default async function Home() {
+	const movies = await getFeaturedMovies();
+	console.log(movies);
 	return (
-		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title()}>Make&nbsp;</h1>
-				<h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
+		<><section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+			<div className="justify-center inline-block max-w-lg text-center">
+				<h1 className={title({ color: "violet" })}>HYGRAPHlix&nbsp;</h1>
 				<br />
-				<h1 className={title()}>
-					websites regardless of your design experience.
-				</h1>
+				<h2 className={title()}>
+					An endless world of cinematic wonder
+				</h2>
 				<h2 className={subtitle({ class: "mt-4" })}>
-					Beautiful, fast and modern React UI library.
+					Watch movies with your friends and family
 				</h2>
 			</div>
 
@@ -46,6 +83,31 @@ export default function Home() {
 					</span>
 				</Snippet>
 			</div>
-		</section>
+		</section><div className="flex flex-col justify-between">
+				<section className="mb-32 text-center">
+					<h2  className={title({size:"sm"})}>
+						Top 8 Movies
+					</h2>
+					<div className="grid px-5 mt-4 lg:gap-xl-12 gap-x-6 md:grid-cols-2 lg:grid-cols-4">
+						{movies.map(
+							(movie: {
+								id: string;
+								federateMovie: { data: { Title: string; Poster: string; alt: string; Genre: string; Director: string; }; };
+								slug: string;
+							}) => (
+								<MovieCard
+									key={movie.id}
+									Title={movie.federateMovie.data.Title}
+									Poster={movie.federateMovie.data.Poster}
+									alt={movie.federateMovie.data.Title}
+									Genre={movie.federateMovie.data.Genre}
+									Director={movie.federateMovie.data.Director}
+									slug={movie.slug} />
+							)
+						)}
+					</div>
+				</section>
+			</div>
+		</>
 	);
 }
