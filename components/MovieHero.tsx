@@ -2,7 +2,7 @@ import React from "react";
 
 type MovieHeroProps = {
         Title: string;
-        Poster: string;
+        //Poster: string;
         Plot: string;
         Actors: string;
         Director: string;
@@ -12,12 +12,11 @@ type MovieHeroProps = {
         Year: string;
 }
 
-const MovieHero: React.FC<MovieHeroProps> = ({ Title, Plot, Poster, Actors, Genre, Director, Rated, Runtime, Year }) => {
+const MovieHero: React.FC<MovieHeroProps> = ({ Title, Plot, Actors, Genre, Director, Rated, Runtime, Year }) => {
   return (
     <div className="flex flex-col gap-4 p-10 md:flex-row">
-      <img src={Poster} alt={Title} className="w-64 h-auto md:w-96" />
+   <h1 className="mb-4 text-6xl font-bold">{Title}</h1>
       <div>
-        <h1 className="mb-4 text-6xl font-bold">{Title}</h1>
         <p className="text-lg"><span className="text-xl font-bold">Plot: </span> {Plot}</p>
         <p className="text-lg"><span className="text-xl font-bold">Actors: </span>{Actors}</p>
         <p className="text-lg"><span className="text-xl font-bold">Director: </span>{Director}</p>

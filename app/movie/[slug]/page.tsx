@@ -59,7 +59,7 @@ if (!HYGRAPH_ENDPOINT) {
         <MovieHero 
           Title={movieData.federateMovie.data.Title}
           Plot={movieData.federateMovie.data.Plot}
-          Poster={movieData.federateMovie.data.Poster}
+          //Poster={movieData.federateMovie.data.Poster}
           Actors={movieData.federateMovie.data.Actors}
           Genre={movieData.federateMovie.data.Genre}
           Director={movieData.federateMovie.data.Director}
