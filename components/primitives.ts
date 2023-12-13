@@ -4,7 +4,7 @@ export const title = tv({
 	base: "tracking-tight inline font-semibold",
 	variants: {
 		color: {
-			violet: "from-[#FF1CF7] to-[#b249f8]",
+			violet: "from-[#FF1CF7] to-[#5b4cff]",
 			yellow: "from-[#FF705B] to-[#FFB457]",
 			blue: "from-[#5EA2EF] to-[#0072F5]",
 			cyan: "from-[#00b7fa] to-[#01cfea]",
@@ -16,6 +16,8 @@ export const title = tv({
 			sm: "text-3xl lg:text-4xl",
 			md: "text-[2.3rem] lg:text-5xl leading-9",
 			lg: "text-4xl lg:text-6xl",
+			xl: "text-5xl lg:text-7xl",
+			jumbo: "text-6xl lg:text-8xl",
 		},
 		fullWidth: {
 			true: "w-full block",

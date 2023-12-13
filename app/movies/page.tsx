@@ -44,7 +44,7 @@ export default async function Movies() {
       <section className="mb-32 text-center">
         <h2 className="my-12 text-5xl font-bold">
           Hygraphlix{" "}
-          <span className="px-2 py-2 text-hygraph-color">Movie Collection</span>
+          <span className="px-2 py-2 ">Movie Collection</span>
         </h2>
         <div className="grid px-5 lg:gap-xl-12 gap-x-6 md:grid-cols-2 lg:grid-cols-4">
           {movies.map(

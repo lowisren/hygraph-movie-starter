@@ -48,32 +48,14 @@ export default async function Home() {
 	return (
 		<><section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 			<div className="justify-center inline-block max-w-lg text-center">
-				<h1 className={title({ color: "violet" })}>HYGRAPHlix&nbsp;</h1>
+				<h1 className={title({ color: "violet", size:"jumbo" })}>HYGRAPHlix&nbsp;</h1>
 				<br />
-				<h2 className={title()}>
-					An endless world of cinematic wonder
+				<h2 className={title({size: "sm"})}>
+					The cinematic wonderland
 				</h2>
 				<h2 className={subtitle({ class: "mt-4" })}>
 					Watch movies with your friends and family
 				</h2>
-			</div>
-
-			<div className="flex gap-3">
-				<Link
-					isExternal
-					href={siteConfig.links.docs}
-					className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
-				>
-					Documentation
-				</Link>
-				<Link
-					isExternal
-					className={buttonStyles({ variant: "bordered", radius: "full" })}
-					href={siteConfig.links.github}
-				>
-					<GithubIcon size={20} />
-					GitHub
-				</Link>
 			</div>
 
 			<div className="mt-8">
@@ -85,7 +67,7 @@ export default async function Home() {
 			</div>
 		</section><div className="flex flex-col justify-between">
 				<section className="mb-32 text-center">
-					<h2  className={title({size:"sm"})}>
+					<h2  className={title({size:"lg"})}>
 						Top 8 Movies
 					</h2>
 					<div className="grid px-5 mt-4 lg:gap-xl-12 gap-x-6 md:grid-cols-2 lg:grid-cols-4">
