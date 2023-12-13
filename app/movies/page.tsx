@@ -17,7 +17,7 @@ async function getMovies() {
     body: JSON.stringify({
       query: `
       query Movies {
-        movies {
+        movies(first: 100) {
             federateMovie {
               data {
                 Title
@@ -37,7 +37,7 @@ async function getMovies() {
 }
 
 export default async function Movies() {
-  const movies = await getMovies();0
+  const movies = await getMovies();
   console.log(movies);
   return (
     <main className="flex flex-col justify-between">

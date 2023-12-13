@@ -1,5 +1,7 @@
 //Movie individual page: app/artist/[slug]/page.tsx
 import Image from "next/image";
+import MovieHero from "@/components/MovieHero";
+import MuxPlayerComponent from "@/components/MuxPlayer";
 
 async function getMovie(slug: string) {
   const HYGRAPH_ENDPOINT = process.env.HYGRAPH_ENDPOINT;
@@ -50,19 +52,21 @@ if (!HYGRAPH_ENDPOINT) {
 
   export default async function Movie({ params }: { params: { slug: string } }) {
     const movieData = await getMovie(params.slug);
+    const playbackId = 'Y02pUdSHhkfAYvkrsM00ajHFIM02RGVeVH4gjHUKwDdeMs'
     return (
-      <div className="p-10 bg-gray-100">
-      <div className="my-4">
-        <Image src={movieData.federateMovie.data.Poster} alt={movieData.federateMovie.data.Title} width={200} height={300} />
+      <div className="p-10">
+         <MuxPlayerComponent playbackId={playbackId} />
+        <MovieHero 
+          Title={movieData.federateMovie.data.Title}
+          Plot={movieData.federateMovie.data.Plot}
+          Poster={movieData.federateMovie.data.Poster}
+          Actors={movieData.federateMovie.data.Actors}
+          Genre={movieData.federateMovie.data.Genre}
+          Director={movieData.federateMovie.data.Director}
+          Rated={movieData.federateMovie.data.Rated}
+          Runtime={movieData.federateMovie.data.Runtime}
+          Year={movieData.federateMovie.data.Year}        
+        />
       </div>
-      <h1 className="text-2xl text-gray-700">{movieData.federateMovie.data.Title} </h1>
-      <p className="text-gray-500">Plot: {movieData.federateMovie.data.Plot}</p>
-      <p className="text-gray-500">Actors: {movieData.federateMovie.data.Actors}</p>
-      <p className="text-gray-500">Director: {movieData.federateMovie.data.Director}</p>
-      <p className="text-gray-500">Genre: {movieData.federateMovie.data.Genre}</p>
-      <p className="text-gray-500">Rated: {movieData.federateMovie.data.Rated}</p>
-      <p className="text-gray-500">Runtime: {movieData.federateMovie.data.Runtime}</p>
-      <p className="text-gray-500">Year: {movieData.federateMovie.data.Year}</p>
-    </div>
     );
-}
+  }
