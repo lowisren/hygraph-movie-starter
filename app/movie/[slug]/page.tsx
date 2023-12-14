@@ -29,13 +29,13 @@ if (!HYGRAPH_ENDPOINT) {
                     Year
                     imdbID
                     Runtime
-                    Poster
                     Title
                   }
                 }
                 id
                 slug
                 title
+                moviePlayer
             }
           }`,
           variables: {
@@ -46,7 +46,7 @@ if (!HYGRAPH_ENDPOINT) {
     );
 
     const data = await response.json();
-    //console.log(data.data.movie);
+  //console.log(data.data.movie);
     return data.data.movie
   }
 
@@ -59,7 +59,6 @@ if (!HYGRAPH_ENDPOINT) {
         <MovieHero 
           Title={movieData.federateMovie.data.Title}
           Plot={movieData.federateMovie.data.Plot}
-          //Poster={movieData.federateMovie.data.Poster}
           Actors={movieData.federateMovie.data.Actors}
           Genre={movieData.federateMovie.data.Genre}
           Director={movieData.federateMovie.data.Director}

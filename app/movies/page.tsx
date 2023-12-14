@@ -1,5 +1,5 @@
 //Homepage with movies: app/page.js
-
+import { title } from "@/components/primitives";
 import MovieCard from "@/components/MovieCard";
 
 //Get all Movies
@@ -28,6 +28,11 @@ async function getMovies() {
             }
             id
             slug
+            moviePoster {
+              height
+              width
+              url
+            }
           }
       }`,
     }),
@@ -35,28 +40,43 @@ async function getMovies() {
   const json = await response.json();
   return json.data.movies;
 }
+interface Movie {
+  id: string;
+  federateMovie: {
+    data: {
+      Title: string;
+      Poster: string;
+      alt: string;
+      Genre: string;
+      Director: string;
+    };
+  };
+  slug: string;
+  moviePoster: {
+    height: number;
+    width: number;
+    url: string;
+  };
+}
 
 export default async function Movies() {
-  const movies = await getMovies();
-  console.log(movies);
+  const movies: Movie[] = await getMovies();
+  //console.log(movies);
   return (
     <main className="flex flex-col justify-between">
       <section className="mb-32 text-center">
-        <h2 className="my-12 text-5xl font-bold">
+        <h1 className={title({size: "lg"})}>
           Hygraphlix{" "}
           <span className="px-2 py-2 ">Movie Collection</span>
-        </h2>
-        <div className="grid px-5 lg:gap-xl-12 gap-x-6 md:grid-cols-2 lg:grid-cols-4">
-          {movies.map(
-            (movie: {
-              id: string;
-              federateMovie: { data: { Title: string; Poster: string; alt: string; Genre: string; Director:string } };
-              slug: string;
-            }) => (
+        </h1>
+        <div className="grid my-8 w-px-5 lg:gap-xl-12 gap-x-6 md:grid-cols-2 lg:grid-cols-4">
+          {movies.map((movie: Movie) => (
+            
               <MovieCard
                 key={movie.id}
                 Title={movie.federateMovie.data.Title}
                 Poster={movie.federateMovie.data.Poster}
+                moviePoster={movie.moviePoster}
                 alt={movie.federateMovie.data.Title}
                 Genre={movie.federateMovie.data.Genre}
                 Director={movie.federateMovie.data.Director}

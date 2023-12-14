@@ -1,46 +1,46 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Next.js + NextUI",
-	description: "Make beautiful websites regardless of your design experience.",
+	name: "Hygraphlix",
+	description: "A movie streaming platform",
 	navItems: [
 		{
 			label: "Movies",
 			href: "/movies",
 		},
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    }
+		{
+			label: "Genres",
+			href: "/genres",
+		},
+		{
+		label: "Docs",
+		href: "/docs",
+		},
+		{
+		label: "Blog",
+		href: "/blog",
+		},
+		{
+		label: "About",
+		href: "/about",
+		}
 	],
 	navMenuItems: [
 		{
-			label: "Profile",
-			href: "/profile",
+			label: "Movies",
+			href: "/movies",
+		},
+		{
+			label: "Genres",
+			href: "/genres",
 		},
 		{
 			label: "Dashboard",
 			href: "/dashboard",
 		},
 		{
-			label: "Projects",
-			href: "/projects",
-		},
-		{
-			label: "Team",
-			href: "/team",
-		},
-		{
-			label: "Calendar",
-			href: "/calendar",
+			label: "Profile",
+			href: "/profile",
 		},
 		{
 			label: "Settings",

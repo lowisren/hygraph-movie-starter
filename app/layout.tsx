@@ -56,11 +56,11 @@ export default function RootLayout({
 							<Link
 								isExternal
 								className="flex items-center gap-1 text-current"
-								href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-								title="nextui.org homepage"
+								href="https://hygraph.com/"
+								title="Hygraph homepage"
 							>
-								<span className="text-default-600">Powered by</span>
-								<p className="text-primary">NextUI</p>
+								<span className="text-default-600">Brought to you by</span>
+								<p className="text-primary">Hygraph</p>
 							</Link>
 						</footer>
 					</div>
