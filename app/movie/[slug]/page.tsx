@@ -52,7 +52,7 @@ if (!HYGRAPH_ENDPOINT) {
 
   export default async function Movie({ params }: { params: { slug: string } }) {
     const movieData = await getMovie(params.slug);
-    const playbackId = 'Y02pUdSHhkfAYvkrsM00ajHFIM02RGVeVH4gjHUKwDdeMs'
+    const playbackId = movieData.moviePlayer.playbackId;
     return (
       <div className="p-10">
          <MuxPlayerComponent playbackId={playbackId} />

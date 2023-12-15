@@ -7,7 +7,12 @@ interface MuxPlayerProps {
 }
 
 const MuxPlayerComponent: React.FC<MuxPlayerProps> = ({ playbackId }) => {
-  return <MuxPlayer playbackId={playbackId} />;
+  return (
+    <MuxPlayer 
+      playbackId={playbackId}
+      accent-color="#5b4cff" 
+    />
+  );
 };
 
 export default MuxPlayerComponent;

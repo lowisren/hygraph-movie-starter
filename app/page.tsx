@@ -88,11 +88,11 @@ export default async function Home() {
                   };
                 };
                 slug: string;
-				moviePoster: {
-				  height: number;
-				  width: number;
-				  url: string;
-				};
+                moviePoster: {
+                  height: number;
+                  width: number;
+                  url: string;
+                };
               }) => (
                 <MovieCard
                   key={movie.id}
