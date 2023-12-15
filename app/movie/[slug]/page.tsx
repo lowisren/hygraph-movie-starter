@@ -55,7 +55,7 @@ if (!HYGRAPH_ENDPOINT) {
     const playbackId = movieData.moviePlayer.playbackId;
     return (
       <div className="p-10">
-         <MuxPlayerComponent playbackId={playbackId} />
+         <MuxPlayerComponent playbackId={movieData.moviePlayer.playbackId} />
         <MovieHero 
           Title={movieData.federateMovie.data.Title}
           Plot={movieData.federateMovie.data.Plot}
