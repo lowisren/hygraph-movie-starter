@@ -7,7 +7,7 @@ import {
 	NavbarItem,
 	NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
+
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
@@ -22,8 +22,6 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import {
 	TwitterIcon,
 	GithubIcon,
-	DiscordIcon,
-	HeartFilledIcon,
 	SearchIcon,
 } from "@/components/icons";
 
@@ -85,9 +83,6 @@ export const Navbar = () => {
 				<NavbarItem className="hidden gap-2 sm:flex">
 					<Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
 						<TwitterIcon className="text-default-500" />
-					</Link>
-					<Link isExternal href={siteConfig.links.discord} aria-label="Discord">
-						<DiscordIcon className="text-default-500" />
 					</Link>
 					<Link isExternal href={siteConfig.links.github} aria-label="Github">
 						<GithubIcon className="text-default-500" />
