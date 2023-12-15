@@ -7,6 +7,9 @@ Option 1: One-click Deployment
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lowisren/hygraph-movie-starter/)
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flowisren%2Fhygraph-movie-starter&env=HYGRAPH_ENDPOINT)
+
+
 Option 2: Manual clone
 
 1. Clone this repo: ```git clone https://github.com/lowisren/hygraph-movie-starter/```
