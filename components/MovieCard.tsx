@@ -20,8 +20,8 @@ type MovieCardProps = {
 const MovieCard: React.FC<MovieCardProps> = ({ Poster, moviePoster, Title, Genre, Director, slug }) => {
   return (
     <Link href={`/movie/${slug}`}>
-        <Card className="my-6 md:flex md:flex-col">
-          <CardHeader className="flex-col items-start px-4 pt-2 pb-0 md:flex md:flex-col">
+        <Card className="p-2 my-8 md:flex md:flex-col">
+          <CardHeader className="flex-col items-start md:flex md:flex-col">
             <Image
               alt={Title}
               className="object-cover w-full rounded-xl min-h-[375px] max-h-[375px]"

@@ -10,7 +10,7 @@ Option 1: One-click Deployment
 
 ### Deploy to Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lowisren/hygraph-movie-starter/)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lowisren/hygraph-movie-starter.git)
 
 ### Deploy to Vercel
 
