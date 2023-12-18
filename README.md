@@ -1,11 +1,18 @@
 # Hygraphlix movie streaming platform starter 
 This project is a starter template for Hygraph. It combines content from Hygraph, Federate This Demo API, OMDB, Mux, Next.js 14, NextUI, and Tailwind CSS
 
+## Clone Hygraph project
+[![Clone movie project](https://hygraph.com/button)](https://app.hygraph.com/clone/60a5f60969474157a5bb6cec6452e833?name=Hygraph%20Movie%20Platform%20Starter)
+
 ## Installation methods
 
-Option 1: One-click Deployment 
+Option 1: One-click Deployment
+
+### Deploy to Netlify
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lowisren/hygraph-movie-starter/)
+
+### Deploy to Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flowisren%2Fhygraph-movie-starter&env=HYGRAPH_ENDPOINT)
 
