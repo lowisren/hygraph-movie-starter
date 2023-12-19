@@ -19,7 +19,7 @@ Option 1: One-click Deployment
 
 Option 2: Manual clone
 
-1. Clone this repo: ```git clone https://github.com/lowisren/hygraph-movie-starter/```
+1. Clone this repo: ```npx degit https://github.com/lowisren/hygraph-movie-starter/```
 2. Navigate to the directory and run ```npm install```
 3. Run ```npm run dev```
 4. Manually connect Netlify(using the netlify.toml template) when ready to deploy

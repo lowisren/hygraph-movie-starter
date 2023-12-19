@@ -1,7 +1,11 @@
 {
-  "name": "next-app-template",
-  "version": "0.0.1",
-  "private": true,
+  "name": "hygraph-movie-starter",
+  "version": "1.0.0",
+  "private": false,
+  "author": {
+    "name": "Lo Etheridge for Hygraph CMS"
+  },
+  "description": "A starter template for Hygraph CMS with content federation using Next.js 14, Tailwind CSS 3, Next UI, and Mux",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    dangerouslyAllowSVG: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -9,6 +10,18 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'm.media-amazon.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'hygraph.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'vercel.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.netlify.com'
       }
       
     ]
