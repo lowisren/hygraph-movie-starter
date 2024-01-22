@@ -1,0 +1,29 @@
+{
+  "type": "STARTER",
+  "stack": [
+    {
+      "image": "https://media.graphassets.com/4TdTQfRUTNyCghIirV1c",
+      "title": "NuxtJS"
+    },
+    {
+      "image": "https://media.graphassets.com/0u0awvQwWvFYmcPKnafQ",
+      "title": "Tailwind CSS"
+    }
+  ],
+  "details": "**About the Starter** \n\n SKNCRE is a fictitious cosmetics brand selling costly snail slime skin care products: face serum, face cream, eye contour, and the SKNCRE bundle. What you often see in composable e-commerce is that the product information lives in a specialized management system (a PIM), the content of the website in a CMS, and commerce features such as a cart, checkout, account, and payments in yet another system (a commerce engine). \n\n In this example, all pages, content, and media are stored in Hygraph, but the products come from an external system - in this case, a mock API called [Federate This](https://www.federatethis.com). We expose the data in Hygraph via Content Federation. Developers query the CMS for product data, while editors can use the data inside the CMS while they combine editing native and federated content as if it were the same. The beauty is that developers *and* content editors do not need to understand the external product API as they use it directly through Hygraph. \n\n Read more [here](https://hygraph.com/marketplace/starters/skncre-starter).",
+  "resources": [
+    {
+      "url": "https://skncre-cosmetics-hygraph.vercel.app/",
+      "title": "Live demo"
+    },
+    {
+      "url": "https://github.com/timbenniks/skncre-cosmetics-hygraph",
+      "title": "Github repo"
+    },
+    {
+      "url": "https://vercel.com/new/clone?repository-url=https://github.com/timbenniks/skncre-cosmetics-hygraph&env=GQL_HOST&envDescription=HYGRAPH%20PERFORMANCE%20ENDPOINT&envLink=https://github.com/timbenniks/skncre-cosmetics-hygraph&project-name=skncre-cosmetics-hygrap&repo-name=skncre-cosmetics-hygrap&demo-title=skncre-cosmetics-hygraph&demo-description=A%20composable%20commerce%20demo%20with%20Hygraph,%20NuxtJS,%20and%20an%20external%20API%20for%20product%20data.&demo-url=https://skncre-cosmetics-hygraph.vercel.app&demo-image=https://media.graphassets.com/586NRGWHRce61TVKy4xN",
+      "title": "Deploy your own"
+    }
+  ],
+  "coverPicture": "https://media.graphassets.com/x8Ot3yzCRa6B8nVuTGyD"
+}
