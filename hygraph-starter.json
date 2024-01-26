@@ -1,0 +1,37 @@
+{
+    "type": "STARTER",
+    "stack": [
+      {
+        "image": "https://media.graphassets.com/ZEuG5TiARyieQIFAoLWL",
+        "title": "NextJS"
+      },
+      {
+        "image": "https://media.graphassets.com/0u0awvQwWvFYmcPKnafQ",
+        "title": "Tailwind CSS"
+      },
+      {
+        "image": " https://media.graphassets.com/JkikRDssRtGxT6wSR87d",
+        "title": "Mux"
+      }
+    ],
+    "details": "**About the Starter** \n\n Hygraphlix is a movie streaming platform that demos Hygraph, NextJS 14, Tailwind CSS, and Mux. \n\n The Hygraphlix demo is a movie streaming platform that uses Hygraph to compose content from multiple sources.  \n\n **About the stack** \n\n The demo uses NextJS 14, Tailwind CSS, and Mux for video delivery. Movies are stored in Hygraph, but the metadata comes from an external system, in this case, a mock API called [Federate This](https://www.federatethis.com) that wraps the open-source movie database, OMDB. Hygraphlix shows how to create a Genre movie section with one query that combines native Hygraph content and OMDB metadata to sort movies by Genre. \n\n To get the most out of this demo, connect Mux: \n\n 1. [Sign up for a Mux account](https://dashboard.mux.com/signup) \n\n 2. [Install the Mux app in your Hygraph project](https://app.hygraph.com/apps/mux/new) \n\n 3. Create access tokens for your Mux account(https://hygraph.com/docs/integrations/connect-mux) \n\n Read more [here](https://hygraph.com/marketplace/starters/hygraph-nextjs-mux-movie-platform).",
+    "resources": [
+      {
+        "url": "https://hygraph-movie-starter.vercel.app/",
+        "title": "Live demo"
+      },
+      {
+        "url": "https://github.com/lowisren/hygraph-movie-starter/",
+        "title": "Github repo"
+      },
+      {
+        "url": "https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flowisren%2Fhygraph-movie-starter&env=HYGRAPH_ENDPOINT",
+        "title": "Deploy to Vercel"
+      },
+      {
+        "url": "https://app.netlify.com/start/deploy?repository=https://github.com/lowisren/hygraph-movie-starter",
+        "title": "Deploy to Netlify"
+      }
+    ],
+    "coverPicture": "https://media.graphassets.com/EW7YYOTGQ5w1e5HQkq3H"
+  }

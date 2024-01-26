@@ -1,10 +1,9 @@
-//Lang page for movies by genre: app/page.js
+//Landing page for movies by genre: app/page.js
 
 import MovieCard from "@/components/MovieCard";
 import { subtitle, title } from "@/components/primitives";
 
-//Get all Movies
-
+//Get all Movie data from Hygraph & OMDB
 async function getMovies() {
   const HYGRAPH_ENDPOINT = process.env.HYGRAPH_ENDPOINT;
   if (!HYGRAPH_ENDPOINT) {
@@ -41,6 +40,7 @@ async function getMovies() {
   const json = await response.json();
   return json.data.movies;
 }
+// Declare Movie interface
 interface Movie {
   federateMovie: {
     data: {
