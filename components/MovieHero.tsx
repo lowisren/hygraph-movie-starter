@@ -1,16 +1,7 @@
 import React from "react";
+import { MovieHeroProps } from "@/types/types";
 
-type MovieHeroProps = {
-        Title: string;
-        //Poster: string;
-        Plot: string;
-        Actors: string;
-        Director: string;
-        Genre: string;
-        Rated: string;
-        Runtime: string;
-        Year: string;
-}
+
 
 const MovieHero: React.FC<MovieHeroProps> = ({ Title, Plot, Actors, Genre, Director, Rated, Runtime, Year }) => {
   return (

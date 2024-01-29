@@ -2,9 +2,9 @@
 
 import MovieCard from "@/components/MovieCard";
 import { subtitle, title } from "@/components/primitives";
+import { Movie } from '@/types/types';
 
-//Get all Movies
-
+//Get all Movies from Hygraph
 async function getMovies() {
   const HYGRAPH_ENDPOINT = process.env.HYGRAPH_ENDPOINT;
   if (!HYGRAPH_ENDPOINT) {
@@ -41,23 +41,7 @@ async function getMovies() {
   const json = await response.json();
   return json.data.movies;
 }
-interface Movie {
-  federateMovie: {
-    data: {
-      Genre: string;
-      Title: string;
-      Poster: string;
-      Director: string;
-    };
-  };
-  id: string;
-  slug: string;
-  moviePoster: {
-    height: number;
-    width: number;
-    url: string;
-  };
-}
+
 export default async function Movies() {
   const movies: Movie[] = await getMovies();
   //console.log(movies);

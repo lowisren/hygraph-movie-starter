@@ -1,5 +1,6 @@
 //Homepage with movies: app/page.js
 import { title } from "@/components/primitives";
+import { Movie } from "@/types/types"
 import MovieCard from "@/components/MovieCard";
 
 //Get all Movies
@@ -39,24 +40,6 @@ async function getMovies() {
   });
   const json = await response.json();
   return json.data.movies;
-}
-interface Movie {
-  id: string;
-  federateMovie: {
-    data: {
-      Title: string;
-      Poster: string;
-      alt: string;
-      Genre: string;
-      Director: string;
-    };
-  };
-  slug: string;
-  moviePoster: {
-    height: number;
-    width: number;
-    url: string;
-  };
 }
 
 export default async function Movies() {
