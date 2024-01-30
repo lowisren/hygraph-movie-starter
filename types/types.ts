@@ -1,11 +1,5 @@
-import {SVGProps} from "react";
+import { SVGProps } from "react";
 import { ThemeProviderProps } from "next-themes/dist/types";
-
-
-
-export type IconSvgProps = SVGProps<SVGSVGElement> & {
-  size?: number;
-};
 export interface Movie {
   id: string;
   federateMovie: {
@@ -24,6 +18,10 @@ export interface Movie {
     url: string;
   };
 }
+export interface MuxPlayerProps {
+  playbackId: string;
+}
+
 export type MovieHeroProps = {
   Title: string;
   //Poster: string;
@@ -34,7 +32,7 @@ export type MovieHeroProps = {
   Rated: string;
   Runtime: string;
   Year: string;
-}
+};
 
 export type MovieCardProps = {
   Poster: string;
@@ -49,12 +47,11 @@ export type MovieCardProps = {
     url: string;
   };
 };
-export interface MuxPlayerProps {
-  playbackId: string;
-}
 
+export type IconSvgProps = SVGProps<SVGSVGElement> & {
+  size?: number;
+};
 export interface ProvidersProps {
-	children: React.ReactNode;
-	themeProps?: ThemeProviderProps;
+  children: React.ReactNode;
+  themeProps?: ThemeProviderProps;
 }
-
