@@ -62,35 +62,38 @@ export default async function Movies() {
   const movies: Movie[] = await getMovies();
   //console.log(movies);
   const genres = [
-    ...new Set(movies.map((movie: Movie) => movie.federateMovie.data.Genre.split(",")[0])),
+    ...new Set(
+      movies.map((movie: Movie) => movie.federateMovie.data.Genre.split(",")[0])
+    ),
   ];
   return (
-      <section className="flex flex-col justify-between mb-32 text-center">
-      <h1 className={title({size: "xl"})}>
-          Movies by Genres
-        </h1>
-        {genres.map((genre) => (
-          <div className="text-left" key={genre}>
-            <h2 className={`${subtitle()} text-lg font-bold my-8`}>{genre}</h2>
-            <div className="grid px-5 lg:gap-xl-12 gap-x-6 md:grid-cols-2 lg:grid-cols-4">
-              {movies
-                // filter movies by genre and use the first genre in the list to group movie cards
-                .filter((movie) => movie.federateMovie.data.Genre.split(',')[0] === genre)
-                .map((movie) => (
-                  <MovieCard
-                    key={movie.id}
-                    Title={movie.federateMovie.data.Title}
-                    Poster={movie.federateMovie.data.Poster}
-                    moviePoster={movie.moviePoster} 
-                    alt={movie.federateMovie.data.Title}
-                    Genre={movie.federateMovie.data.Genre}
-                    Director={movie.federateMovie.data.Director}
-                    slug={movie.slug}
-                  />
-                ))}
-            </div>
+    <section className="flex flex-col justify-between mb-32 text-center">
+      <h1 className={title({ size: "xl" })}>Movies by Genres</h1>
+      {genres.map((genre) => (
+        <div className="text-left" key={genre}>
+          <h2 className={`${subtitle()} text-lg font-bold my-8`}>{genre}</h2>
+          <div className="grid px-5 lg:gap-xl-12 gap-x-6 md:grid-cols-2 lg:grid-cols-4">
+            {movies
+              // filter movies by genre and use the first genre in the list to group movie cards
+              .filter(
+                (movie) =>
+                  movie.federateMovie.data.Genre.split(",")[0] === genre
+              )
+              .map((movie) => (
+                <MovieCard
+                  key={movie.id}
+                  Title={movie.federateMovie.data.Title}
+                  Poster={movie.federateMovie.data.Poster}
+                  moviePoster={movie.moviePoster}
+                  alt={movie.federateMovie.data.Title}
+                  Genre={movie.federateMovie.data.Genre}
+                  Director={movie.federateMovie.data.Director}
+                  slug={movie.slug}
+                />
+              ))}
           </div>
-        ))}
-      </section>
+        </div>
+      ))}
+    </section>
   );
 }

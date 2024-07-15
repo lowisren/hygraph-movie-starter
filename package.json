@@ -6,6 +6,7 @@
     "name": "Lo Etheridge for Hygraph CMS"
   },
   "description": "A starter template for Hygraph headless CMS with content federation built in TypeScript using Next.js 14, Tailwind CSS 3, Next UI, and Mux",
+  "description": "A starter template for Hygraph CMS with content federation built in TypeScript using Next.js 14, Tailwind CSS 3, Next UI, and Mux",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
